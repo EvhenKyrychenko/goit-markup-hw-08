@@ -1,18 +1,57 @@
 .footer {
   background-color: var(--hero-bg-color);
-  padding-top: 60px;
-  padding-bottom: 60px;
+  @include mobile {
+    @include secondary-top-padding;
+    @include secondary-bottom-padding;
+  }
+  @include desktop {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 .footer-content {
-  display: flex;
-  align-items: baseline;
+  @include mobile {
+    text-align: center;
+  }
+  @include desktop {
+    display: flex;
+    align-items: baseline;
+  }
+}
+.footer-content-for-tablet {
+  @include tablet {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+  @include desktop {
+    margin-bottom: 0;
+  }
+}
+.footer-contacts {
+  @include mobile {
+    margin-bottom: $min-margin;
+  }
+  @include tablet {
+    margin-left: 76px;
+    margin-bottom: 0;
+  }
+  @include desktop {
+    margin-left: 0;
+  }
 }
 .address {
   margin-top: 20px;
 }
 
 .address__item:not(:last-child) {
-  margin-bottom: 9px;
+  @include mobile {
+    margin-bottom: 8px;
+  }
+  @include desktop {
+    margin-bottom: 9px;
+  }
 }
 
 .address__map {
@@ -56,11 +95,27 @@
 }
 
 .footer-links {
-  margin-left: 70px;
+  @include mobile {
+    margin-bottom: $min-margin;
+  }
+  @include tablet {
+    margin-bottom: 0;
+    margin-right: 89px;
+  }
+  @include desktop {
+    margin-left: 70px;
+    margin-bottom: 0;
+    margin-right: 0;
+  }
 }
 
 .footer-social {
   display: flex;
+  @include mobile {
+    justify-content: center;
+  }
+  @include desktop {
+  }
 }
 
 .footer-social__link {
@@ -88,8 +143,7 @@
 }
 .footer-form__input {
   height: 50px;
-  width: 358px;
-  margin-right: 12px;
+  width: 100%;
   padding: 15px 16px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -105,6 +159,13 @@
   &:focus {
     outline: none;
     border-color: var(--accent-color);
+  }
+  @include tablet {
+    width: 450px;
+  }
+  @include desktop {
+    width: 358px;
+    margin-right: 12px;
   }
 }
 
@@ -128,6 +189,12 @@
   &:hover,
   &:focus {
     @include hover-btn-bg;
+  }
+  @include mobile {
+    margin-top: 20px;
+  }
+  @include tablet {
+    margin-top: 0;
   }
 }
 

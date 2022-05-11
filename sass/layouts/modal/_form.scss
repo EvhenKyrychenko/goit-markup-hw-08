@@ -3,12 +3,24 @@
 }
 .modal__title {
   font-weight: 700;
-  font-size: 20px;
-  line-height: 23px;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
   margin-bottom: 12px;
+  @include mobile {
+    max-width: 370px;
+    font-size: 20px;
+    line-height: 30px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @include desktop {
+    max-width: 100%;
+    font-size: 20px;
+    line-height: 23px;
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 
 .modal-form__label {
@@ -90,14 +102,20 @@
 }
 
 .modal-form__privacy {
-  font-size: 14px;
-  line-height: 1.71;
   letter-spacing: 0.03em;
 
   margin-bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+  @include mobile {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 .modal-form__checkbox {
   appearance: none;

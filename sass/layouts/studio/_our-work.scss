@@ -1,7 +1,12 @@
 .works {
+  display: none;
   color: var(--first-bg-color);
   padding-top: var(--main-top-padding);
   padding-bottom: var(--main-top-padding);
+
+  @include desktop {
+    display: block;
+  }
 }
 
 .works-list {
