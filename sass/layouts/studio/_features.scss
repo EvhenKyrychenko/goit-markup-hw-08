@@ -1,10 +1,10 @@
 .features {
   color: var(--first-bg-color);
   background-color: var(--first-bg-color);
-  @include mobile {
-    @include secondary-top-padding;
-    @include secondary-bottom-padding;
-  }
+
+  @include secondary-top-padding;
+  @include secondary-bottom-padding;
+
   @include tablet {
     @include secondary-top-padding;
     @include secondary-bottom-padding;
@@ -27,15 +27,20 @@
   }
 }
 .features__item {
-  @include mobile {
+  &:not(:last-child) {
     margin-bottom: $min-margin;
   }
+
   @include tablet {
-    margin-bottom: $min-margin;
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: $min-margin;
+    }
     width: calc(100% / 2 - 15px);
   }
   @include desktop {
-    margin-bottom: $min-margin;
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
     width: calc(100% / 4 - 30px);
   }
 }

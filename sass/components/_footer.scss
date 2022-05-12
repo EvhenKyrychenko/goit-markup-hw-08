@@ -1,18 +1,17 @@
 .footer {
   background-color: var(--hero-bg-color);
-  @include mobile {
-    @include secondary-top-padding;
-    @include secondary-bottom-padding;
-  }
+
+  @include secondary-top-padding;
+  @include secondary-bottom-padding;
+
   @include desktop {
     padding-top: 60px;
     padding-bottom: 60px;
   }
 }
 .footer-content {
-  @include mobile {
-    text-align: center;
-  }
+  text-align: center;
+
   @include desktop {
     display: flex;
     align-items: baseline;
@@ -30,9 +29,8 @@
   }
 }
 .footer-contacts {
-  @include mobile {
-    margin-bottom: $min-margin;
-  }
+  margin-bottom: $min-margin;
+
   @include tablet {
     margin-left: 76px;
     margin-bottom: 0;
@@ -46,9 +44,8 @@
 }
 
 .address__item:not(:last-child) {
-  @include mobile {
-    margin-bottom: 8px;
-  }
+  margin-bottom: 8px;
+
   @include desktop {
     margin-bottom: 9px;
   }
@@ -95,9 +92,8 @@
 }
 
 .footer-links {
-  @include mobile {
-    margin-bottom: $min-margin;
-  }
+  margin-bottom: $min-margin;
+
   @include tablet {
     margin-bottom: 0;
     margin-right: 89px;
@@ -111,9 +107,8 @@
 
 .footer-social {
   display: flex;
-  @include mobile {
-    justify-content: center;
-  }
+  justify-content: center;
+
   @include desktop {
   }
 }
@@ -190,9 +185,9 @@
   &:focus {
     @include hover-btn-bg;
   }
-  @include mobile {
-    margin-top: 20px;
-  }
+
+  margin-top: 20px;
+
   @include tablet {
     margin-top: 0;
   }

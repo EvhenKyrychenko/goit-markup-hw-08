@@ -12,6 +12,13 @@
   display: flex;
   align-items: center;
 }
+.open-btn {
+  border: none;
+  background-color: transparent;
+  display: flex;
+
+  margin-left: auto;
+}
 
 .navigation__list {
   @include tablet {
@@ -23,6 +30,9 @@
   }
 }
 .nav-list {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   display: flex;
 }
 .nav-list__link {
@@ -63,8 +73,11 @@
   }
 }
 .contacts {
-  display: flex;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   @include tablet {
+    display: flex;
     flex-wrap: wrap;
   }
   @include desktop {

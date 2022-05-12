@@ -3,14 +3,6 @@
   @include secondary-top-padding;
   @include secondary-bottom-padding;
 
-  @include mobile {
-    @include secondary-top-padding;
-    @include secondary-bottom-padding;
-  }
-  @include tablet {
-    @include secondary-top-padding;
-    @include secondary-bottom-padding;
-  }
   @include desktop {
     padding-top: var(--main-top-padding);
     padding-bottom: var(--main-top-padding);
@@ -23,9 +15,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  @include desktop {
-    display: flex;
-  }
 }
 .our-team-list__foto {
   width: 100%;
@@ -36,11 +25,10 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
-  @include mobile {
-    &:not(:last-child) {
-      margin-bottom: $min-margin;
-    }
+  &:not(:last-child) {
+    margin-bottom: $min-margin;
   }
+
   @include tablet {
     width: calc(100% / 2 - 15px);
     margin-bottom: $min-margin;
@@ -56,10 +44,9 @@
     }
   }
   .our-team-unit {
-    @include mobile {
-      padding-top: 30px;
-      padding-bottom: 24px;
-    }
+    padding-top: 30px;
+    padding-bottom: 24px;
+
     @include desktop {
       padding: 30px 32px;
     }

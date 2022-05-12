@@ -6,9 +6,8 @@
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 
-  @include mobile {
-    margin-bottom: $min-margin;
-  }
+  margin-bottom: $min-margin;
+
   @include tablet {
     margin-bottom: $min-margin;
   }
