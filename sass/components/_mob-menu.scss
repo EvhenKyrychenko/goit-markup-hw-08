@@ -1,5 +1,12 @@
 .mob-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
   padding: 48px 40px;
+  overflow-y: scroll;
 }
 .mob-menu__item {
   &:not(:last-child) {
