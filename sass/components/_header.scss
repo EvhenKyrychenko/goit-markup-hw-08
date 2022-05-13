@@ -90,6 +90,7 @@
     display: flex;
     &:not(:last-child) {
       margin-right: 50px;
+      margin-bottom: 0;
     }
   }
 }
@@ -133,6 +134,9 @@
   &:focus {
     fill: var(--accent-color);
   }
+  @include tablet {
+    display: none;
+  }
 }
 
 .close-btn {
@@ -142,6 +146,8 @@
   cursor: pointer;
   border: none;
   background-color: transparent;
+  display: flex;
+  margin-right: auto;
 
   transition: fill 250ms $transition-t-f;
   &:hover,

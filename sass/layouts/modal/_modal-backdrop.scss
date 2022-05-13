@@ -31,6 +31,10 @@
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0.2);
   }
+
+  min-width: 100vw;
+  min-height: 100vh;
+  margin-top: 60px;
   @include mobile {
     min-width: 450px;
     min-height: 609px;
