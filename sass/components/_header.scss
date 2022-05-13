@@ -4,20 +4,11 @@
 
 .header-content {
   display: flex;
-  @include mobile {
-    align-items: center;
-  }
+  align-items: center;
 }
 .navigation {
   display: flex;
   align-items: center;
-}
-.open-btn {
-  border: none;
-  background-color: transparent;
-  display: flex;
-
-  margin-left: auto;
 }
 
 .navigation__list {
@@ -128,4 +119,30 @@
 .contacts__icon {
   margin-right: 10px;
   fill: currentColor;
+}
+
+.open-btn {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  margin-left: auto;
+
+  transition: fill 250ms $transition-t-f;
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+
+.close-btn {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  transition: fill 250ms $transition-t-f;
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
 }
