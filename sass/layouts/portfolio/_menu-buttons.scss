@@ -1,16 +1,39 @@
 .menu {
   color: var(--first-bg-color);
-  padding-bottom: var(--main-top-padding);
-  padding-top: var(--main-top-padding);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desktop {
+    padding-bottom: var(--main-top-padding);
+    padding-top: var(--main-top-padding);
+  }
 }
 .menu__list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  @include tablet {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+  @include desktop {
+    margin-bottom: 50px;
+  }
 }
 
-.menu__item:not(:last-child) {
-  margin-right: 8px;
+.menu__item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+  @media screen and (max-width: '400.98px') {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  @media screen and (min-width: '401px') and (max-width: '767.98px') {
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 15px;
+    }
+  }
 }
 .menu__btn {
   cursor: pointer;
