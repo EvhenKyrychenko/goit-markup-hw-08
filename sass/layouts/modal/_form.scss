@@ -1,5 +1,8 @@
 .form-wrapper {
-  padding: 40px;
+  padding: 40px 15px;
+  @include mobile {
+    padding: 40px;
+  }
 }
 .modal__title {
   font-weight: 700;

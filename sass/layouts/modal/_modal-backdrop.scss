@@ -27,15 +27,18 @@
     transform: translate(-50%, -50%) scale(0.2);
   }
   position: absolute;
-  top: 50%;
+  top: 5px;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%) scale(1);
   min-width: 100vw;
   min-height: 609px;
   @include mobile {
     min-width: 450px;
-    margin-top: 150px;
     margin-bottom: auto;
+  }
+  @include tablet {
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
   @include desktop {
     min-width: 528px;
