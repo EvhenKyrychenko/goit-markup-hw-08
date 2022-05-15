@@ -5,10 +5,6 @@
   @include secondary-top-padding;
   @include secondary-bottom-padding;
 
-  @include tablet {
-    @include secondary-top-padding;
-    @include secondary-bottom-padding;
-  }
   @include desktop {
     padding-top: var(--main-top-padding);
     padding-bottom: 0;
