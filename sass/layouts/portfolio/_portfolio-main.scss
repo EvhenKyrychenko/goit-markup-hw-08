@@ -1,7 +1,8 @@
 .portfolio {
   @include tablet {
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
   @include desktop {
     display: inline-flex;
@@ -10,7 +11,12 @@
 }
 .portfolio__item {
   background: #ffffff;
-  margin-bottom: 30px;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  @include tablet {
+    width: calc(100% / 2 - 15px);
+  }
   @include desktop {
     margin-right: 30px;
 
@@ -26,6 +32,11 @@
 .portfolio__link {
   display: block;
   transition: box-shadow 250ms $transition-t-f;
+  @media screen and (min-width: '768px') and (max-width: '1199.98px') {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
   &:hover,
   &:focus {
@@ -64,6 +75,7 @@
   color: var(--first-bg-color);
 }
 .portfolio__stack {
+  flex-grow: 1;
   padding: 20px 24px;
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;

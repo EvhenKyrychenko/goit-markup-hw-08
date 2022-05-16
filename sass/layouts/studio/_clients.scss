@@ -10,7 +10,7 @@
 .clients-list {
   display: flex;
 
-  @media screen and (max-width: '479px') {
+  @media screen and (max-width: '479.98px') {
     flex-direction: column;
     align-items: center;
     flex-wrap: nowrap;
@@ -21,7 +21,7 @@
   }
 }
 .clients-list__item {
-  @media screen and (max-width: '479px') {
+  @media screen and (max-width: '479.98px') {
     &:not(:first-child) {
       margin-top: $min-margin;
     }

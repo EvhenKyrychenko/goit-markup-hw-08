@@ -1,16 +1,13 @@
 .section-title {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.17;
+  line-height: $main-lh;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 
   margin-bottom: $min-margin;
 
-  @include tablet {
-    margin-bottom: $min-margin;
-  }
   @include desktop {
     margin-bottom: 50px;
   }
