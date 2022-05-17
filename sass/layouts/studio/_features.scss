@@ -17,10 +17,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  @include desktop {
-    display: flex;
-    justify-content: space-between;
-  }
 }
 .features__item {
   &:not(:last-child) {

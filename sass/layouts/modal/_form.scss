@@ -110,6 +110,7 @@
   letter-spacing: 0.03em;
   margin-bottom: 30px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 
@@ -145,7 +146,4 @@
 
 .modal-form__link {
   color: var(--accent-color);
-  @media screen and (max-width: '479.98px') {
-    display: contents;
-  }
 }

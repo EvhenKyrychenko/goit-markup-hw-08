@@ -14,7 +14,7 @@
   &:not(:last-child) {
     margin-bottom: 30px;
   }
-  @include tablet {
+  @media screen and (min-width: '768px') and (max-width: '1199.98px') {
     width: calc(100% / 2 - 15px);
   }
   @include desktop {
@@ -55,14 +55,22 @@
   height: 100%;
   left: 0;
   top: 0;
-  padding: 63px 24px;
+  padding: 14px 24px;
   transform: translateY(100%);
-
+  overflow: scroll;
   background-color: rgba(33, 150, 243, 0.9);
   opacity: 0;
 
   transition: opacity 250ms $transition-t-f, transform 250ms $transition-t-f;
-
+  @include mobile {
+    padding: 77px 24px;
+  }
+  @include tablet {
+    padding: 49px 24px;
+  }
+  @include desktop {
+    padding: 63px 24px;
+  }
   .portfolio__link:hover & {
     opacity: 1;
     transform: translateY(0);

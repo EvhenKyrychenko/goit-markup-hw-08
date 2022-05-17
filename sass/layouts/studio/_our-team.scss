@@ -76,14 +76,9 @@
       justify-content: space-between;
     }
     &__item {
-      @include mobile {
+      @media screen and (max-width: '1199.98px') {
         &:not(:last-child) {
           margin-right: 10px;
-        }
-      }
-      @include desktop {
-        &:not(:last-child) {
-          margin-right: 0;
         }
       }
     }
