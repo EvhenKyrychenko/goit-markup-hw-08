@@ -57,11 +57,14 @@
   top: 0;
   padding: 14px 24px;
   transform: translateY(100%);
-  overflow: scroll;
+
   background-color: rgba(33, 150, 243, 0.9);
   opacity: 0;
 
   transition: opacity 250ms $transition-t-f, transform 250ms $transition-t-f;
+  @media screen and(max-width:"479.98px") {
+    overflow: scroll;
+  }
   @include mobile {
     padding: 77px 24px;
   }
