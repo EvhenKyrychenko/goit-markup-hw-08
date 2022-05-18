@@ -55,16 +55,14 @@
   height: 100%;
   left: 0;
   top: 0;
-  padding: 14px 24px;
+  padding: 25px 24px;
   transform: translateY(100%);
 
   background-color: rgba(33, 150, 243, 0.9);
   opacity: 0;
 
   transition: opacity 250ms $transition-t-f, transform 250ms $transition-t-f;
-  @media screen and(max-width:"479.98px") {
-    overflow: scroll;
-  }
+
   @include mobile {
     padding: 77px 24px;
   }
@@ -80,10 +78,13 @@
   }
 }
 .portfolio__desc {
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: var(--first-bg-color);
+  @include mobile {
+    font-size: 18px;
+  }
 }
 .portfolio__stack {
   flex-grow: 1;

@@ -10,7 +10,9 @@
   }
 }
 .footer-content {
-  text-align: center;
+  @media screen and (max-width: '1199.98px') {
+    text-align: center;
+  }
 
   @include desktop {
     display: flex;
